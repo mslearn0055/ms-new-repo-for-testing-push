@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+
+  pre_build:
+    commands:
+      - echo Running tests...
+      - npm test
+
+  build:
+    commands:
+      - echo Building the project...
+      - npm run build
+
+  post_build:
+    commands:
+      - echo Packaging the project...
+      - zip -r my-artifact.zip .
+      - echo Build completed successfully.
+
+artifacts:
+  files:
+    - my-artifact.zip
+  discard-paths: yes
+
+cache:
+  paths:
+    - node_modules/**/*
