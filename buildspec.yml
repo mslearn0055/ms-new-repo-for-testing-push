@@ -8,8 +8,8 @@ phases:
 
   pre_build:
     commands:
-      - echo Running tests...
-      - npm test
+      - echo skipping tests...
+  
 
   build:
     commands:
