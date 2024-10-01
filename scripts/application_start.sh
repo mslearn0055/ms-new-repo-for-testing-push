@@ -1,5 +1,9 @@
 #!/bin/bash
-
+# Remove existing package-lock.json if it exists
+if [ -f "/home/ubuntu/express-app/package-lock.json" ]; then
+    echo "Removing existing package-lock.json"
+    rm /home/ubuntu/express-app/package-lock.json
+fi
 #give permission for everything in the express-app directory
 sudo chmod -R 777 /home/ubuntu/express-app
 
