@@ -16,9 +16,3 @@ npm install
 
 #start our node app in the background
 node app.js > app.out.log 2> app.err.log < /dev/null & 
-
-# Remove existing package-lock.json if it exists
-if [ -f "/home/ubuntu/express-app/package-lock.json" ]; then
-    echo "Removing existing package-lock.json"
-    rm /home/ubuntu/express-app/package-lock.json
-fi
